@@ -2,7 +2,7 @@
     Autor:          Juan Esteban Nichoy Larrañaga
     Fecha:          16/12/2020
     Ejecutar en:    BD_Proyecto_Grado
-    Descripción:    Eliminar la tablas creadas en la base de datos
+    Descripción:    Eliminar la tablas creadas en la base de datos en nodo sensor
 */
 
 --Eliminar la tabla de configuración nodo sensor.

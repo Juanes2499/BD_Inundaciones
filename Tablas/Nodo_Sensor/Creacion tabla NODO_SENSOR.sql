@@ -12,5 +12,7 @@ CREATE TABLE IF NOT EXISTS `NODO_SENSOR` (
 	`ESTADO` bool NOT NULL,
 	`FECHA_CREACION` date NOT NULL,
 	`HORA_CREACION` time NOT NULL,
+	`FECHA_ACTUALIZACION` date default null,
+	`HORA_ACTUALIZACION` time default null 
 	primary key (ID_NODO_SENSOR)
 );

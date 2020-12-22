@@ -14,3 +14,16 @@ VALUES
 
 --Consultar todo los Nodos Sensores crados
 SELECT * FROM NODO_SENSOR;
+
+--Actualizar nodo sensor por ID
+UPDATE NODO_SENSOR
+    SET LATITUD = 1.0
+        LONGITUD = 1.0
+        ESTADO = true,
+        FECHA_ACTUALIZACION = CURDATE(),
+        HORA_ACTUALIZACION = CURTIME() 
+    WHERE ID_NODO_SENSOR = 1;
+
+--Eliminar nodo sensor
+DELETE FROM NODO_SENSOR
+    WHERE ID_NODO_SENSOR = 1;
