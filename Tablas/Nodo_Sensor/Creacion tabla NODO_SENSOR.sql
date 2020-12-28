@@ -7,12 +7,13 @@
 
 CREATE TABLE IF NOT EXISTS `NODO_SENSOR` (
   	`ID_NODO_SENSOR` int(11) NOT NULL AUTO_INCREMENT,
+	`TOKEN` longtext NOT NULL,
 	`LATITUD` double NOT NULL,
 	`LONGITUD` double NOT NULL,
 	`ESTADO` bool NOT NULL,
 	`FECHA_CREACION` date NOT NULL,
 	`HORA_CREACION` time NOT NULL,
 	`FECHA_ACTUALIZACION` date default null,
-	`HORA_ACTUALIZACION` time default null 
+	`HORA_ACTUALIZACION` time default null, 
 	primary key (ID_NODO_SENSOR)
 );
