@@ -13,7 +13,6 @@ VALUES
     (?, ?, CURDATE(), CURTIME())
 
 --Comprobar si el usuario y el rol existe
-
 SELECT 
     (SELECT COUNT(*) FROM USER WHERE ID_USER = ?) USER_EXIST,
     (SELECT COUNT(*) FROM ROLES WHERE ID_ROL = ?) ROL_EXIST
