@@ -1,4 +1,4 @@
-INSERT INTO roles (NOMBRE_ROL,DETALLES,FECHA_CREACION,HORA_CREACION,FECHA_ACTUALIZACION,HORA_ACTUALIZACION) VALUES
+INSERT INTO ROLES (NOMBRE_ROL,DETALLES,FECHA_CREACION,HORA_CREACION,FECHA_ACTUALIZACION,HORA_ACTUALIZACION) VALUES
 	 ('MASTER','El usuario tiene todo los privilegios para consumir todo los endpoints proporcionados por la API','2020-12-21','22:31:52',NULL,NULL),
 	 ('ADMINISTRADOR','El usurio puede agregar nodo sensores, agregar varible y configurar el nodo sensor','2020-12-21','22:36:10','2020-12-22','14:26:03'),
 	 ('NODO_SENSOR','El usuario tiene todo los privilegios para consumir todo los endpoints relacioandos con el nodo sensor: crear, consultar (/, /ID), actualizar (/id) y eliminar (/id)','2020-12-25','20:58:41',NULL,NULL),
