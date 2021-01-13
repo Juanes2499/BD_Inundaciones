@@ -5,7 +5,11 @@
     Descripción:    Query Users
 */
 
---Crar un nuevo usuario
+--Verificar si el usuario existe
+ SELECT * FROM USER
+	WHERE (TIPO_DOC_ID = ? AND NUMERO_DOC_ID = ?) OR EMAIL = ?
+
+--Crear un nuevo usuario
 INSERT 
     INTO USER 
     (NOMBRES, APELLIDOS, TIPO_DOC_ID, NUMERO_DOC_ID, EMAIL, PASSWORD, FECHA_CREACION, HORA_CREACION)
@@ -14,6 +18,35 @@ VALUES
 
 --Consultar usuarios
 SELECT * FROM USER;
+
+--Consultar usuario por ID_USER
+SELECT 
+	* 
+FROM USER 
+WHERE 
+	ID_USER = ?
+
+--Consultar usuarios por EMAIL
+SELECT 
+	*
+FROM USER U 
+WHERE 
+	U.EMAIL LIKE '%?%'
+
+--Actualizar usuairo por ID_USER
+UPDATE USER
+	SET NOMBRES = ?,
+		APELLIDOS = ?,
+		TIPO_DOC_ID = ?,
+		NUMERO_DOC_ID = ?,
+		EMAIL = ?,
+		PASSWORD = ?,
+		FECHA_ACTUALIZACION = ?,
+		HORA_ACTUALIZACION = ?
+	WHERE ID_USER = ?
+
+--Eliminar usuario por ID_USER
+DELETE FROM USER WHERE ID_USER = ?
 
 --Login y generar token con la informacion y roles asiganados
 SELECT 
