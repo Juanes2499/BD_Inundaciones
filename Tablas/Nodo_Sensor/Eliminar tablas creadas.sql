@@ -16,3 +16,6 @@ DROP TABLE VARIABLES_NODO_SENSOR
 
 --Eliminar la tabla que almacena los dispositivos nodos sensores.
 DROP TABLE NODO_SENSOR;
+
+--Eliminar la tabla que almacena las reglas que relaciona los nodos sensores con las variables
+DROP TABLE REGLAS_NODO_SENSOR;
