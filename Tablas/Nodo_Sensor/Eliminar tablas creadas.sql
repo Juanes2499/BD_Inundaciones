@@ -6,7 +6,7 @@
 */
 
 --Eliminar la tabla de configuración nodo sensor.
-DROP TABLE CONFIGURACION_NODO_SENSOR;
+DROP TABLE CONFIGURACION_VARIABLES_NODO_SENSOR;
 
 --Eliminar la tabla que almancena los datos generados por el nodo sensor.
 DROP TABLE DATOS_NODO_SENSOR;
