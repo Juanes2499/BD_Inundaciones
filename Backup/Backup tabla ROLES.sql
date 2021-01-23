@@ -1,9 +1,0 @@
-INSERT INTO ROLES (NOMBRE_ROL,DETALLES,FECHA_CREACION,HORA_CREACION,FECHA_ACTUALIZACION,HORA_ACTUALIZACION) VALUES
-	 ('MASTER','El usuario tiene todo los privilegios para consumir todo los endpoints proporcionados por la API','2020-12-21','22:31:52',NULL,NULL),
-	 ('ADMINISTRADOR','El usurio puede agregar nodo sensores, agregar varible y configurar el nodo sensor','2020-12-21','22:36:10','2020-12-22','14:26:03'),
-	 ('NODO_SENSOR','El usuario tiene todo los privilegios para consumir todo los endpoints relacioandos con el nodo sensor: crear, consultar (/, /ID), actualizar (/id) y eliminar (/id)','2020-12-25','20:58:41',NULL,NULL),
-	 ('VARIABLES_NODO_SENSOR','El usuario tiene todo los privilegios para consumir todo los endpoints relacioandos con las varibles del nodo sensor: crear, consultar (/, /ID  or nombre variable), actualizar (/id or nombre variable) y eliminar (/id  or nombre variable)','2020-12-28','12:09:36',NULL,NULL),
-	 ('CONFIGURACION_VARIABLES_NODO_SENSOR','El usuario tiene todo los privilegios para consumir todo los endpoints relacioandos con la configuracion de las varibles del nodo sensor: crear, consultar (/, /nombre variable, /ids) y eliminar (/id)','2020-12-29','21:21:09',NULL,NULL),
-	 ('ROLES','El usuario tiene todo los privilegios para consumir todo los endpoints relacioandos con los roles de usuario: crear, consultar (/, /nombreRol), actualizar (/id) y eliminar (/id)','2021-01-12','18:45:03',NULL,NULL),
-	 ('CONFIGURACION_ROLES','El usuario tiene todo los privilegios para consumir todo los endpoints relacioandos con la configuracion de roles de usuario: crear, consultar (/, /nombreRol/email) y eliminar (/id)','2021-01-12','19:11:44','2021-01-12','19:56:33'),
-	 ('DBA','El usuario tiene todo los privilegios para consumir todo los endpoints relacioandos con los usuarios: crear, consultar(/, /idUser, /emailUser), actualizar(/), eliminar(/)','2021-01-12','21:10:43',NULL,NULL);
