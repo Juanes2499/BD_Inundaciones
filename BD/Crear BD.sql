@@ -9,4 +9,4 @@
 CREATE DATABASE `proyecto_grado_api`;
 
 --Crear base de datos ambiente TEST
-CREATE DATABASE `proyecto_grado_api_test`;
+CREATE DATABASE `PROYECTO_GRADO_API_TEST`;
