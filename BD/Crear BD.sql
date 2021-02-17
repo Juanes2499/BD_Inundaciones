@@ -8,5 +8,5 @@
 --Crear base de datos ambiente DESARROLLO
 CREATE DATABASE `proyecto_grado_api`;
 
---Crear base de datos ambiente TEST
-CREATE DATABASE `PROYECTO_GRADO_API_TEST`;
+--Crear base de datos ambiente PROD
+CREATE DATABASE `PROYECTO_GRADO_API_PROD`;

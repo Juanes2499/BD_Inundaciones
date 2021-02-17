@@ -7,5 +7,5 @@
 
 --Crear usuario ambiente DESARROLLO
 
---Crear usuario ambiente TEST
-CREATE USER 'DBATEST' IDENTIFIED BY 'DBATEST2021';
+--Crear usuario ambiente PROD
+CREATE USER 'DBAPROD' IDENTIFIED BY 'DBAPROD2021';
