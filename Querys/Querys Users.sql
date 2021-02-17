@@ -1,0 +1,73 @@
+/*
+    Autor:          Juan Esteban Nichoy Larrañaga
+    Fecha:          21/12/2020
+    Ejecutar en:    BD_Proyecto_Grado
+    Descripción:    Query Users
+*/
+
+--Verificar si el usuario existe
+ SELECT * FROM USER
+	WHERE (TIPO_DOC_ID = ? AND NUMERO_DOC_ID = ?) OR EMAIL = ?
+
+--Crear un nuevo usuario
+INSERT 
+    INTO USER 
+    (NOMBRES, APELLIDOS, TIPO_DOC_ID, NUMERO_DOC_ID, EMAIL, PASSWORD, FECHA_CREACION, HORA_CREACION)
+VALUES 
+    ('PRUEBA','BD','CC','1234','prueba@mail.com','1234', CURDATE(), CURTIME());
+
+--Consultar usuarios
+SELECT * FROM USER;
+
+--Consultar usuario por ID_USER
+SELECT 
+	* 
+FROM USER 
+WHERE 
+	ID_USER = ?
+
+--Consultar usuarios por EMAIL
+SELECT 
+	*
+FROM USER U 
+WHERE 
+	U.EMAIL LIKE '%?%'
+
+--Actualizar usuairo por ID_USER
+UPDATE USER
+	SET NOMBRES = ?,
+		APELLIDOS = ?,
+		TIPO_DOC_ID = ?,
+		NUMERO_DOC_ID = ?,
+		EMAIL = ?,
+		PASSWORD = ?,
+		FECHA_ACTUALIZACION = ?,
+		HORA_ACTUALIZACION = ?
+	WHERE ID_USER = ?
+
+--Eliminar usuario por ID_USER
+DELETE FROM USER WHERE ID_USER = ?
+
+--Login y generar token con la informacion y roles asiganados
+SELECT 
+	U.ID_USER,
+	U.NOMBRES,
+	U.APELLIDOS,
+	U.TIPO_DOC_ID,
+	U.NUMERO_DOC_ID,
+	U.EMAIL,
+	U.PASSWORD,
+	(CASE (SELECT NOMBRE_ROL FROM CONFIGURACION_ROLES CR INNER JOIN ROLES R ON R.ID_ROL = CR.ID_ROL WHERE CR.ID_USER = U.ID_USER AND R.NOMBRE_ROL = 'MASTER')
+		WHEN "MASTER" THEN TRUE
+		ELSE FALSE
+	END) ROL_MASTER, 
+	(CASE (SELECT NOMBRE_ROL FROM CONFIGURACION_ROLES CR INNER JOIN ROLES R ON R.ID_ROL = CR.ID_ROL  WHERE CR.ID_USER = U.ID_USER AND R.NOMBRE_ROL = 'ADMINISTRADOR')
+		WHEN "ADMINISTRADOR" THEN TRUE
+		ELSE FALSE
+	END) ROL_ADMINISTRADOR, 
+	U.FECHA_CREACION, 
+	U.HORA_CREACION
+FROM USER U 
+WHERE 
+    U.EMAIL = 'JUANES@MAIL.COM'
+GROUP BY U.EMAIL
